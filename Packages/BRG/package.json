@@ -2,7 +2,7 @@
   "displayName": "Batch Renderer Group",
   "name": "com.elmortem.brg",
   "author": "Makar Osokin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "unity": "2022.3",
   "description": "Batch Renderer Group container.",
   "keywords": [

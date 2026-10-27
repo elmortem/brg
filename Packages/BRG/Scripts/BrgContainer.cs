@@ -207,7 +207,11 @@ namespace BRG
 			drawCommands->drawCommands = (BatchDrawCommand*)UnsafeUtility.Malloc(UnsafeUtility.SizeOf<BatchDrawCommand>(), alignment, Allocator.TempJob);
 			drawCommands->drawRanges = (BatchDrawRange*)UnsafeUtility.Malloc(UnsafeUtility.SizeOf<BatchDrawRange>(), alignment, Allocator.TempJob);
 			drawCommands->visibleInstances = (int*)UnsafeUtility.Malloc(_numInstances * sizeof(int), alignment, Allocator.TempJob);
+#if UNITY_6000_4_OR_NEWER
+			drawCommands->drawCommandPickingEntityIds = null;
+#else
 			drawCommands->drawCommandPickingInstanceIDs = null;
+#endif
 
 			drawCommands->drawCommandCount = 1;
 			drawCommands->drawRangeCount = 1;
